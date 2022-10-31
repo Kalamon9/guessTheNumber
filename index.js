@@ -11,7 +11,7 @@ function togglePopup() {
 }
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber);
+console.log(`my secret number ${secretNumber}`);
 
 let score = 20;
 let highscore = 0;
@@ -21,7 +21,7 @@ function displayMessage(message) {
 
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
-  console.log(guess);
+  // console.log(guess);
 
   if (!guess) {
     displayMessage("No number was selected!");
@@ -58,7 +58,7 @@ document.querySelector(".check").addEventListener("click", function () {
 document.querySelector(".again").addEventListener("click", function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  console.log(secretNumber);
+  console.log(`new secret number ${secretNumber}`);
   displayMessage("Start again");
   document.querySelector(".score").textContent = score;
   document.querySelector(".number").textContent = "?";
