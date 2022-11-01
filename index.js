@@ -44,6 +44,7 @@ function checkNo() {
       document.querySelector(".highscore").textContent = highscore;
     }
   } else if (secretNumber !== guess) {
+    document.querySelector(".guess").value = "";
     if (score > 1) {
       if (guess <= 20) {
         displayMessage(secretNumber > guess ? "Too low" : "Too high");
